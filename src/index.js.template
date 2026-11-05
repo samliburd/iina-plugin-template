@@ -7,8 +7,8 @@ const {
 {{/hasOverlay}}
 {{#hasSidebar}}
   sidebar,
-  event,
 {{/hasSidebar}}
+  event,
   console,
   menu,
 } = iina;

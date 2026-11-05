@@ -14,7 +14,7 @@
 {{#hasOverlay}}
     "serve-overlay": "parcel serve ui/overlay/index.html --dist-dir dist/ui/overlay",
 {{/hasOverlay}}
-    "build": "rm -rf dist && parcel build .",
+    "build": "rm -rf dist && parcel build . --no-content-hash",
 {{/useBundler}}
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,25 +22,25 @@
   "license": "ISC",
   "devDependencies": {
 {{#useBundler}}
-    "@parcel/transformer-sass": "^2.8.3",
+    "@parcel/transformer-sass": "^2.16.0",
 {{/useBundler}}
-    "iina-plugin-definition": "^0.0.7",
+    "iina-plugin-definition": "^0.99.5",
 {{#useBundler}}
-    "prettier": "^2.8.8",
+    "prettier": "^3.5.0",
     "process": "^0.11.10"
 {{/useBundler}}
   },
   "dependencies": {
 {{#useBundler}}
-    "parcel": "^2.8.3",
+    "parcel": "^2.16.0",
     "parcel-optimizer-webview": "git+https://github.com/iina/parcel-optimizer-webview.git",
 {{/useBundler}}
 {{#useReact}}
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
 {{/useReact}}
 {{#useVue}}
-    "vue": "^3.3.4"
+    "vue": "^3.5.0"
 {{/useVue}}
   },
   "browserslist": "safari >= 9",
